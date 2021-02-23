@@ -1,0 +1,384 @@
+/*
+Color scheme (inspired by Spotify's)
+White
+Dark grey: #0B0C10
+Green: #1AA34A, #1ED760 (active)
+Salmon: #FB8D80
+*/
+
+body {
+    background-color: #FB8D80; 
+}
+
+.button-green {
+    background-color: #1AA34A;
+    border-radius: 500px;
+    border: none;
+    color: white;
+    padding: 10px 20px 10px;
+    font-size: 16px;
+}
+
+.button-inverse {
+    background-color: white;
+    border-radius: 500px;
+    border: none;
+    color: #1AA34A;
+    padding: 10px 20px 10px;
+    font-size: 16px;
+}
+
+.button-green:hover {
+    background-color: #1ED760;
+    text-decoration: none;
+    color: white;
+}
+
+.button-inverse:hover {
+    background-color: #1AA34A;
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    position: fixed;
+}
+
+ul {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Home page */
+
+#splash {
+    background-color: #0B0C10;
+}
+
+#intro {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    color: white;
+    max-width: 800px;
+}
+
+#intro h1 {
+    font-size: 7em;
+}
+
+#intro span {
+    color: #FB8D80;
+}
+
+#intro a {
+    position: relative;
+    top: 100px;
+}
+
+/* About page */
+
+#about-body {
+    background-color: white;
+}
+
+#about {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    max-width: 1000px;
+}
+
+#about a {
+    color: #FB8D80;
+}
+
+#about a:hover {
+    text-decoration: none;
+    color: #FB8D80;
+}
+
+#about span {
+    color: #1AA34A;
+}
+
+iframe {
+    width: 500px;
+    height: 300px;
+    border: none;
+}
+
+/* Login/signup forms */
+
+#login-container, #signup-container {
+    position: relative;
+    background-color: #0B0C10;
+    margin: 20vh auto 0;
+    width: 420px;
+    padding: 50px 20px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+}
+
+#login-header {
+    margin-bottom: 50px;
+}
+
+#login-submit {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.login {
+    color: black;
+    display: block;
+    width: 70%;
+    margin: 30px auto;
+}
+
+.error-message {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: 120px;
+    color: #1AA34A;
+}
+
+/* Music display */
+
+#featured {
+    height: 100vh;
+    position: relative;
+}
+
+.featured-image {
+    position: absolute;
+    box-shadow: 0px 30px 40px -25px rgba(0, 0, 0, 1);
+}
+
+/* Found help on horizontally centering positioned objects here: https://stackoverflow.com/a/23384995 */
+#im1 {
+    width: 400px;
+    height: 400px;
+    top: 20vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+}
+
+#im2 {
+    width: 300px;
+    height: 300px;
+    top: 25vh;
+    left: 28%;
+    z-index: -1;
+}
+
+#im3 {
+    width: 300px;
+    height: 300px;
+    top: 25vh;
+    right: 28%;
+    z-index: -1;
+}
+
+#featured-title {
+    position: absolute;
+    font-size: 5em;
+    top: 70vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+}
+
+#list-container {
+    background-color: #0B0C10;
+    display: flex;
+}
+
+.display-column {
+    flex: 50%;
+    margin-top: 50px;
+}
+
+.display-column h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.artist, .track {
+    display: flex;
+    margin: 25px 15%;
+}
+
+.artist-img-container, .track-img-container {
+    flex: 25%;
+    padding: 20px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: .5s ease;
+    opacity:0;
+}
+
+.track-img-container:hover .overlay{
+  opacity: 1;
+}
+
+.overlay-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.artist-img, .track-img {
+    height: 150px;
+    width: 150px;
+}
+
+.content-wrapper {
+    position: relative;
+    flex: 75%;
+}
+
+.content {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+}
+
+.name, .name:visited, .name:focus {
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.name:hover {
+    color: #1AA34A;
+    text-decoration: none;
+}
+
+.followers {
+    color: #1AA34A;
+}
+
+.track-artist, .track-artist:visited, .track-artist:focus {
+    text-decoration: none;
+    color: white;
+}
+
+.track-artist:hover {
+    color: #1AA34A;
+    text-decoration: none;
+}
+
+#change-timeframe {
+    position: absolute;
+    top: 83vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#change-timeframe label {
+    font-size: 2.5em;
+    color: white;
+    font-weight: 500;
+}
+
+#timeframe {
+    display: inline;
+    -webkit-appearance: none; 
+    color: white;
+    margin-left: 10px;
+}
+
+#timeframe:focus {
+    outline: none;
+}
+
+/* BOUNCING ARROW code help from https://codepen.io/bewley/pen/revRQv */
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+i {
+  display: block;
+  color: #fff;
+}
+.arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 60px;
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
